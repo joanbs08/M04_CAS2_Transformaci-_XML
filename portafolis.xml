@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="portafolis.xsl"?>
+
+<portafolis>
+  <informacio_personal>
+    <nom>Joan</nom>
+    <cognoms> Bayarri Subirats</cognoms>
+    <edat_actual>18</edat_actual>
+    <ciutat>Amposta</ciutat>
+    <localitat provincia="Tarragona">Catalunya</localitat>
+    <telefon>623 20 93 95</telefon>
+    <correu>joanbayarri@iesmontsia.org</correu>
+    <foto>https://static1-es.millenium.gg/articles/5/45/61/5/@/240367-xokas-twitch-article_cover_bd-1.png</foto>
+  </informacio_personal>
+
+<educacio>
+  <cicles>
+    <cicle grau="mitja">Sistemes microinformatics i xarxes</cicle>
+    <institut>Ies Montsia Amposta</institut>
+    <any>2020-2022</any>
+  </cicles>
+  <cicles>
+    <cicle grau="superior">Administracio de sistemes informatics en xarxa</cicle>
+    <institut>Ies Montsia Amposta</institut>
+    <any>2022-2024</any>
+  </cicles>
+</educacio>
+
+<UFS>
+  <UF1>
+  <nom>Programacio en XML</nom>
+  <projecte>
+    <nom cas="1">Contruccio i publicacio lloc web</nom>
+    <descripcio>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</descripcio>
+    <data_inici>04/11/2022</data_inici>
+    <data_final>27/01/2023</data_final>
+    <link>#</link>
+  </projecte>
+  <projecte>
+    <nom cas="2">Llenguatge emmagatzematge de la informacio</nom>
+    <descripcio>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</descripcio>
+    <data_inici>27/01/2023</data_inici>
+    <data_final>17/03/2023</data_final>
+    <link>#</link>
+  </projecte>
+  </UF1>
+
+  <UF2>
+  <nom>Ambits aplicacio XML</nom>
+  <projecte>
+    <nom cas="1">Llenguatges per treballar en la informacio de documents (Xpath, Xquery, RSS)</nom>
+    <descripcio>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</descripcio>
+    <data_inici>17/03/2023</data_inici>
+    <data_final>28/04/2023</data_final>
+    <link>#</link>
+  </projecte>
+  <projecte>
+    <nom cas="2">Transformacio XML</nom>
+    <descripcio>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</descripcio>
+    <data_inici>28/04/2023</data_inici>
+    <data_final>24/05/2023</data_final>
+    <link>#</link>
+  </projecte>
+  </UF2>
+
+  <UF3>
+  <nom>Sistemes de gestio informacio empresarial</nom>
+  <projecte>
+    <nom cas="1">Eines Bi (Business Intelligence)</nom>
+    <descripcio>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</descripcio>
+    <data_inici>09/09/2022</data_inici>
+    <data_final>04/11/2022</data_final>
+    <link>#</link>
+  </projecte>
+  </UF3>
+</UFS>
+</portafolis>
