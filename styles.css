@@ -1,4 +1,115 @@
+
+/*Fondo imatge*/
 body {
-/*	background-color: #f5f5f5;*/
-	background-color: red;
+    font-family: Arial, sans-serif;
+    margin-top: 100px;
+    background-color: rgb(231, 231, 231);
+}
+
+/*Capçalera*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(168, 166, 185);
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+
+/*Header fixe*/
+    height: 50px;
+    width: 99%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+
+/*Barra navegacio*/
+
+.menu nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+.menu nav li {
+    margin-right: 15px;
+    margin-bottom: 5px;
+  }
+  
+.menu nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+  
+.menu nav a:hover {
+    color: #0077cc;
+  }
+
+/*Tituls*/
+
+section h2 {
+    text-align: center;
+}
+
+/*Foto perfil*/
+.foto_perfil img {
+    max-width: 700px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+/*Titul projectes*/
+.projectes h2{
+   text-align: center;
+}
+
+/*Estils taula*/
+
+.informacio_personal {
+    margin: auto;
+    width: 40%;
+  }
+
+table {
+    width: 100%;
+  }
+  
+  td {
+    border: 2px solid rgb(219, 212, 212);
+    padding: 10px;
+    border-color: rgb(162, 162, 168)
+  }
+
+/*Apartat educacio*/
+
+  .cicle {
+    text-align: center;
+  }
+
+  .cicle h3 p {
+    font-size: medium;
+
+  }
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+/*Peu de pàgina*/
+footer {
+	background-color: rgb(168, 166, 185);
+	padding: 16px;
+	text-align: center;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+    margin-top: 10px;
+}
+
+footer p {
+	font-size: 20px;
 }

@@ -1,84 +1,111 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:template match="/">
+        <html>
+            <head>
+                <title>portafolis joan</title>
+               <link rel="stylesheet" type="text/css" href="styles.css"/>
+            </head>
+            <body>
+            <main>
+                <header>
+                
+                <div class="capçalera">
+               
+                <h1><strong>Portafolis </strong>
+                <xsl:value-of select="portafolis/informacio_personal/nom"/> 
+                <xsl:value-of select="portafolis/informacio_personal/cognoms"/>
+                </h1>
+                </div>
 
-   <xsl:template match="/">
-    <html>
-      <head>
-        <title>Portafolis Joan Bayarri</title>
-        
-        <link href="styles.css" rel="stylesheet" type="text/css" />
-      </head>
-
-      <body>
-      <header>
-      
-      <div class="capçalera">
-        <img src="{portafolis/informacio_personal/foto}" alt="Foto de Joan"/>
-        <!-- <h1>Portafolis Joan Bayarri Subirats</h1>  -->
-      <h1><strong>Portafolis </strong>
-          <xsl:value-of select="portafolis/informacio_personal/nom"/> 
-          <xsl:value-of select="portafolis/informacio_personal/cognoms"/>
-      </h1>
-      </div>
-
+      <div class="menu">
       <nav>
       <ul>
         <li><a href="#">Inici</a></li>
-        <li><a href="#">Projectes</a></li>
-        <li><a href="#">Curriculum</a></li>
-        <li><a href="#">Contacte</a></li>
+        <li><a href="#projectes">Projectes</a></li>
+        <li><a href="#infopersonal">Sobre mi</a></li>
+        <li><a href="#Estudis">Estudis</a></li>
       </ul>
       </nav>
-
+      </div>
       </header>
 
-      <section class="informacio_personal">
-        <ul>
-        <h2>Informacio personal</h2>
-        <li>Nom: <xsl:value-of select="portafolis/informacio_personal/nom"/></li>
-        <li>Cognoms: <xsl:value-of select="portafolis/informacio_personal/cognoms"/></li>
-        <li>Edat: <xsl:value-of select="portafolis/informacio_personal/edat_actual"/></li>
-        <li>Ciutat: <xsl:value-of select="portafolis/informacio_personal/ciutat"/></li>
-        <li>Localitat: <xsl:value-of select="portafolis/informacio_personal/localitat"/></li>
-        <li>Telefon: <xsl:value-of select="portafolis/informacio_personal/telefon"/></li>
-        <li>Correu: <xsl:value-of select="portafolis/informacio_personal/correu"/></li>
-        </ul>
-      </section>
-      
-      <hr/>
-
-<h2>Educacio</h2>
-  <xsl:for-each select="portafolis/educacio/cicles">
-    <section class="cicle">
-      <h3>Cicle: <xsl:value-of select="cicle"/></h3>
-      <p>Institut: <xsl:value-of select="institut"/></p>
-      <p>Duració cicle: <xsl:value-of select="any"/></p>
+    <section id="infopersonal" class="informacio_personal">
+    <h2>Informació personal</h2>
+    <table>
+    <tr>
+      <td>Nom:</td>
+      <td><xsl:value-of select="portafolis/informacio_personal/nom"/></td>
+    </tr>
+    <tr>
+      <td>Cognoms:</td>
+      <td><xsl:value-of select="portafolis/informacio_personal/cognoms"/></td>
+    </tr>
+    <tr>
+      <td>Edat:</td>
+      <td><xsl:value-of select="portafolis/informacio_personal/edat_actual"/></td>
+    </tr>
+    <tr>
+      <td>Ciutat:</td>
+      <td><xsl:value-of select="portafolis/informacio_personal/ciutat"/></td>
+    </tr>
+    <tr>
+      <td>Localitat:</td>
+      <td><xsl:value-of select="portafolis/informacio_personal/localitat"/></td>
+    </tr>
+    <tr>
+      <td>Telefon:</td>
+      <td><xsl:value-of select="portafolis/informacio_personal/telefon"/></td>
+    </tr>
+    <tr>
+      <td>Correu:</td>
+      <td><xsl:value-of select="portafolis/informacio_personal/correu"/></td>
+    </tr>
+    </table>
     </section>
-  </xsl:for-each>
 
-  <hr/>
-
-  <xsl:for-each select="portafolis/UFS/*">
-    <xsl:for-each select="projecte">     
-      <section class="projectes">
-        <p>Nom UF: <xsl:value-of select="../nom"/></p>
-        <p>Nom del cas: <xsl:value-of select="nom"/></p>
-        <p>Descripcio del cas: <xsl:value-of select="descripcio"/></p>
-        <p>Data inicial del projecte: <xsl:value-of select="data_inici"/></p>
-        <p>Data final del projecte: <xsl:value-of select="data_final"/></p>
-        <br/>
-        <xsl:value-of select="link"/>
-      </section>
+   <section class="foto_perfil">  
+    <xsl:element name="img">
+        <xsl:attribute name="src">
+        <xsl:value-of select="portafolis/informacio_personal/foto_perfil"/>
+        </xsl:attribute>
+    </xsl:element>
+   </section>
+      
+    <section id="Estudis" class="cicle">
+    <xsl:for-each select="portafolis/educacio/cicles">
+        
+            <h3>Cicle: <xsl:value-of select="cicle"/></h3>
+            <p>Institut: <xsl:value-of select="institut"/></p>
+            <p>Duració cicle: <xsl:value-of select="any"/></p>
     </xsl:for-each>
-  </xsl:for-each>
+     </section>
+
+        <div class="contenedor">
+            <div id="projectes">
+            <h2> Ultims projectes:</h2>
+        <xsl:for-each select="//modul/UFS/*">
+        <h3><xsl:value-of select="nom"/></h3>
+        <xsl:for-each select=".//activitat">
+         <p><xsl:value-of select="."/></p>
+         <xsl:choose>
+            <xsl:when test="img">
+               <img src="{img/@src}"/>
+            </xsl:when>
+            </xsl:choose>
+        </xsl:for-each>
+        </xsl:for-each>
+            </div>
+        </div>
+        </main>
 
     <footer>
-    <p>@copyright; 2023 Portafoli activitats 
-      <xsl:value-of select="portafolis/informacio_personal/nom"/> 
-      <xsl:value-of select="portafolis/informacio_personal/cognoms"/>
-    </p>
+        <p>@copyright; 2023 Portafoli activitats 
+        <xsl:value-of select="portafolis/informacio_personal/nom"/> 
+        <xsl:value-of select="portafolis/informacio_personal/cognoms"/>
+        </p>
     </footer>
-      </body>
+    </body>
     </html>
-  </xsl:template>
+    </xsl:template>
 </xsl:stylesheet>
