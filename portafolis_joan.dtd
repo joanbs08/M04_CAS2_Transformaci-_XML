@@ -1,0 +1,31 @@
+<!ELEMENT portafolis (informacio_personal, educacio, moduls)>
+<!ELEMENT informacio_personal (nom, cognoms, edat_actual, ciutat, localitat, telefon, correu, foto_perfil)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT cognoms (#PCDATA)>
+<!ELEMENT edat_actual (#PCDATA)>
+<!ELEMENT ciutat (#PCDATA)>
+<!ELEMENT localitat (#PCDATA)>
+<!ATTLIST localitat
+          provincia CDATA #REQUIRED>
+<!ELEMENT telefon (#PCDATA)>
+<!ELEMENT correu (#PCDATA)>
+<!ELEMENT foto_perfil (#PCDATA)>
+<!ELEMENT educacio (cicles+)>
+<!ELEMENT cicles (cicle, institut, any)>
+<!ELEMENT cicle (#PCDATA)>
+<!ATTLIST cicle
+          grau CDATA #REQUIRED>
+<!ELEMENT institut (#PCDATA)>
+<!ELEMENT any (#PCDATA)>
+<!ELEMENT moduls (modul)>
+<!ELEMENT modul (nom, UFS)>
+<!ELEMENT UFS (UF1, UF2, UF3)>
+<!ELEMENT UF1 (nom, projecte)>
+<!ELEMENT projecte (activitat+)>
+<!ELEMENT activitat (img)>
+<!ELEMENT img (#PCDATA)>
+<!ATTLIST img
+          alt CDATA #REQUIRED
+          src CDATA #REQUIRED>
+<!ELEMENT UF2 (nom, projecte)>
+<!ELEMENT UF3 (nom, projecte)>

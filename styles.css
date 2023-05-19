@@ -43,7 +43,7 @@ header {
   }
   
 .menu nav a:hover {
-    color: #0077cc;
+    color: rgb(0, 119, 204);
   }
 
 /*Tituls*/
@@ -112,4 +112,18 @@ footer {
 
 footer p {
 	font-size: 20px;
+}
+
+@media (max-width: 700px) {
+  .foto_perfil img {
+    max-width: 90%;
+    margin-top: 10px;
+  }
+  .informacio_personal {
+    width: 80%;
+  }
+
+  footer p {
+    font-size: 20%;
+  }
 }
